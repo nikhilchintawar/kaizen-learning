@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "ckeditor",
     "api",
     "api.courses",
+    "api.lesson",
+    "api.author",
 ]
 
 MIDDLEWARE = [
