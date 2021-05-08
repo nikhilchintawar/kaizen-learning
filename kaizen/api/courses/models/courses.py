@@ -7,6 +7,7 @@ class Courses(models.Model):
     name = models.CharField(max_length=200)
     description = RichTextField()
     summary = RichTextField()
+    url = models.CharField(max_length=100, default="null")
     is_free = models.BooleanField(default=False)
     is_purchased = models.BooleanField(default=False)
     price = models.IntegerField()
