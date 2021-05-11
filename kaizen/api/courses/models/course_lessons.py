@@ -7,7 +7,7 @@ from api.lesson.models import Lesson
 class Course_Lessons(models.Model):
     course = models.ForeignKey(Courses, on_delete=models.CASCADE)
     lessons = models.OneToOneField(
-        Lesson, verbose_name=("Course Lessons"), on_delete=models.CASCADE
+        Lesson, verbose_name=("Course Lessons"), on_delete=models.CASCADE, related_name="course_lessons"
     )
 
     def __str__(self):

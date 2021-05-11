@@ -4,8 +4,8 @@ from api.author.serializers import AuthorSerializer
 from api.courses.models.course_creator import Course_Creator
 
 class CourseCreatorSerializer(serializers.ModelSerializer):
-    author=AuthorSerializer()
+    authors=AuthorSerializer()
 
     class Meta:
         model=Course_Creator
-        fields=['author']
+        fields=['authors']

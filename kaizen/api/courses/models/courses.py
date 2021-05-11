@@ -2,6 +2,7 @@ from django.db import models
 
 from ckeditor.fields import RichTextField
 
+from api.lesson.models import Lesson
 # Create your models here.
 class Courses(models.Model):
     name = models.CharField(max_length=200)

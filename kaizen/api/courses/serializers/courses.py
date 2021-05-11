@@ -7,9 +7,9 @@ from api.lesson.models import Lesson
 class CoursesSerializer(serializers.ModelSerializer):
     course_url = serializers.HyperlinkedIdentityField(view_name='courses:courses-detail', lookup_field='url')
     banner = serializers.ImageField(max_length=None, allow_empty_file=False, allow_null=True, required=False)
-    # lessons = CourseLessonsSerializer(many=True, write_only=True)
-    # authors = CourseCreatorSerializer(many=True, read_only=True)
-    # lesson_id = serializers.PrimaryKeyRelatedField(queryset=Lesson.objects.all(), source='lessons', write_only=True)
+    course_lessons = CourseLessonsSerializer(many=True, source="course_lessons_set")
+    course_creator = CourseCreatorSerializer(many=True, source="course_creator_set")
+
 
     class Meta:
         model=Courses
@@ -26,8 +26,7 @@ class CoursesSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
             "course_url",
-            # 'lessons',
-            # 'authors',
-            # "lesson_id"
+            'course_lessons',
+            'course_creator',
             ]
-        # additional_fields=["course_url", 'lessons', 'authors']
+        # additional_fields=[ 'authors']
