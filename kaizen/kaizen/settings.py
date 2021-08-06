@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "corsheaders",
     "ckeditor",
     "api",
-    "api.courses",
     "api.lesson",
     "api.author",
 ]
@@ -91,7 +90,7 @@ DATABASES = {
         "USER": env.DB_USER,
         "PASSWORD": env.DB_PASSWORD,
         "Host": "localhost",
-        "PORT": "3306",
+        "PORT": "3308",
     }
 }
 
