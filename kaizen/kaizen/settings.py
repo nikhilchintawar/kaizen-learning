@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "ckeditor",
     "api",
+    "api.course",
     "api.lesson",
     "api.author",
 ]

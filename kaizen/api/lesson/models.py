@@ -8,3 +8,6 @@ class Lesson(models.Model):
     summary = RichTextField()
     theory = RichTextField()
     video_link = models.CharField(max_length=300)
+
+    def __str__(self):
+        return f"{self.title}"
